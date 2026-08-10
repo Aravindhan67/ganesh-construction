@@ -18,20 +18,19 @@ const FeaturedProjects = () => {
 
         <div style={{ display: 'flex', flexDirection: 'column', gap: '60px', marginTop: '16px' }}>
           {featured.map((project, index) => (
-            <div key={project.id} className="grid-12" style={{ alignItems: 'center' }}>
+            <div key={project.id} className="grid-12" style={{ alignItems: 'center', width: '100%' }}>
               
               <div className="col" style={{ 
-                '--col-desktop': 7,
-                gridColumnStart: index % 2 === 0 ? 1 : 6,
+                gridColumn: index % 2 === 0 ? '1 / 8' : '6 / 13',
                 gridRow: 1
               }}>
-                <ScrollReveal animation={index % 2 === 0 ? 'slide-right' : 'slide-left'}>
-                  <Link to={`/projects/${project.id}`}>
+                <ScrollReveal animation={index % 2 === 0 ? 'slide-right' : 'slide-left'} style={{ width: '100%' }}>
+                  <Link to={`/projects/${project.id}`} style={{ display: 'block', width: '100%' }}>
                     <TiltedCard 
                       imageSrc={project.image}
                       altText={project.title}
-                      containerHeight="600px"
-                      imageHeight="600px"
+                      containerHeight="clamp(300px, 60vh, 600px)"
+                      imageHeight="clamp(300px, 60vh, 600px)"
                       scaleOnHover={1.02}
                       rotateAmplitude={5}
                       displayOverlayContent={true}
@@ -44,12 +43,11 @@ const FeaturedProjects = () => {
               </div>
 
               <div className="col" style={{ 
-                '--col-desktop': 4,
-                gridColumnStart: index % 2 === 0 ? 9 : 1,
+                gridColumn: index % 2 === 0 ? '9 / 13' : '1 / 5',
                 gridRow: 1,
                 padding: '40px 0'
               }}>
-                <ScrollReveal delay={0.2} animation="slide-up">
+                <ScrollReveal delay={0.2} animation="slide-up" style={{ width: '100%' }}>
                   <div style={{ fontFamily: 'var(--font-primary)', fontSize: '4rem', fontWeight: 800, color: 'rgba(17, 19, 19, 0.05)', lineHeight: 1, marginBottom: '24px' }}>
                     0{index + 1}
                   </div>

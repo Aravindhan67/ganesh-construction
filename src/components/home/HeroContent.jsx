@@ -1,8 +1,17 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Button from '../common/Button';
 import ScrollExpand from '../reactbits/ScrollExpand';
 
 const HeroContent = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth <= 768);
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
   return (
     <ScrollExpand
       images={[
@@ -15,8 +24,8 @@ const HeroContent = () => {
       title="GANESH CONSTRUCTION"
       scrollHint="Scroll to explore"
       useWindowScroll={true}
-      startWidth={65}
-      startHeight={75}
+      startWidth={isMobile ? 92 : 65}
+      startHeight={isMobile ? 90 : 75}
       style={{ zIndex: 10, position: 'relative' }}
     >
       <div className="container" style={{ width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center' }}>

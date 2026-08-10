@@ -7,6 +7,7 @@ const ScrollReveal = ({
   duration = 0.8,
   delay = 0,
   className = '',
+  style = {},
   amount = 0.2
 }) => {
   const variants = {
@@ -34,6 +35,7 @@ const ScrollReveal = ({
       whileInView="visible"
       viewport={{ once: true, amount }}
       className={className}
+      style={style}
     >
       {children}
     </motion.div>
