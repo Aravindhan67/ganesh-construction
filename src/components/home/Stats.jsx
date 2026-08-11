@@ -60,7 +60,7 @@ const Stats = () => {
         <div className="col" style={{ '--col-desktop': 7, paddingTop: '40px' }}>
           <ScrollReveal animation="slide-up">
             <p className="text-body-lg" style={{ marginBottom: '64px' }}>
-              Great construction is more than concrete, steel and glass. It is a promise made visible. At Ganesh Construction, we combine technical expertise, architectural intelligence and meticulous project management to deliver environments that perform for decades.
+              Great construction is more than concrete, steel and glass. It is a promise made visible. At Ganesh Properties, we combine technical expertise, architectural intelligence and meticulous project management to deliver environments that perform for decades.
             </p>
           </ScrollReveal>
           

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import SectionHeading from '../components/common/SectionHeading';
-import Button from '../components/common/Button';
+import SpecularButton from '../components/reactbits/SpecularButton';
 
 const NotFound = () => {
   return (
@@ -14,7 +14,15 @@ const NotFound = () => {
         <p className="text-body-lg" style={{ marginBottom: '40px' }}>
           The page you are looking for doesn't exist or has been moved.
         </p>
-        <Button to="/">Return Home</Button>
+        <SpecularButton 
+          to="/"
+          tint="var(--color-text-primary)"
+          tintOpacity={1}
+          textColor="#ffffff"
+          baseColor="#111313"
+        >
+          Return Home
+        </SpecularButton>
       </div>
     </main>
   );

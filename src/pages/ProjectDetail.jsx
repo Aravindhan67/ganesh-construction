@@ -41,19 +41,19 @@ const ProjectDetail = () => {
       {/* Info */}
       <section style={{ padding: '80px 0', borderBottom: '1px solid var(--color-concrete-gray)' }}>
         <div className="container grid-12">
-          <div className="col" style={{ '--col-desktop': 3, '--col-mobile': 2 }}>
+          <div className="col" style={{ gridColumn: 'span 3' }}>
             <div style={{ color: 'var(--color-steel-gray)', fontSize: '0.75rem', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '8px' }}>Location</div>
             <div style={{ fontWeight: 500 }}>{project.location}</div>
           </div>
-          <div className="col" style={{ '--col-desktop': 3, '--col-mobile': 2 }}>
+          <div className="col" style={{ gridColumn: 'span 3' }}>
             <div style={{ color: 'var(--color-steel-gray)', fontSize: '0.75rem', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '8px' }}>Type</div>
             <div style={{ fontWeight: 500 }}>{project.type}</div>
           </div>
-          <div className="col" style={{ '--col-desktop': 3, '--col-mobile': 2 }}>
+          <div className="col" style={{ gridColumn: 'span 3' }}>
             <div style={{ color: 'var(--color-steel-gray)', fontSize: '0.75rem', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '8px' }}>Status</div>
             <div style={{ fontWeight: 500 }}>{project.status}</div>
           </div>
-          <div className="col" style={{ '--col-desktop': 3, '--col-mobile': 2 }}>
+          <div className="col" style={{ gridColumn: 'span 3' }}>
             <div style={{ color: 'var(--color-steel-gray)', fontSize: '0.75rem', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '8px' }}>Area</div>
             <div style={{ fontWeight: 500 }}>{project.area}</div>
           </div>
@@ -63,13 +63,13 @@ const ProjectDetail = () => {
       {/* Description */}
       <section style={{ padding: '60px 0' }}>
         <div className="container grid-12">
-          <div className="col" style={{ '--col-desktop': 4 }}>
+          <div className="col" style={{ gridColumn: 'span 4' }}>
             <h3 style={{ fontSize: '1.25rem', letterSpacing: '0.05em', marginBottom: '24px' }}>SERVICES PROVIDED</h3>
             <ul style={{ display: 'flex', flexDirection: 'column', gap: '12px', color: 'var(--color-text-secondary)' }}>
               {project.services?.map(s => <li key={s}>— {s}</li>)}
             </ul>
           </div>
-          <div className="col" style={{ '--col-desktop': 7, gridColumnStart: 6 }}>
+          <div className="col" style={{ gridColumn: '6 / span 7' }}>
             <div style={{ fontSize: '1.25rem', lineHeight: 1.6, color: 'var(--color-text-secondary)', whiteSpace: 'pre-line' }}>
               {project.fullDescription || project.description}
             </div>
@@ -95,7 +95,7 @@ const ProjectDetail = () => {
             <SectionHeading>TECHNICAL<br/>DETAILS.</SectionHeading>
             <div className="grid-12" style={{ marginTop: '32px' }}>
               {Object.entries(project.technicalDetails).map(([key, val]) => (
-                <div key={key} className="col" style={{ '--col-desktop': 4, marginBottom: '40px' }}>
+                <div key={key} className="col" style={{ gridColumn: 'span 4', marginBottom: '40px' }}>
                   <div style={{ color: 'var(--color-accent)', textTransform: 'uppercase', letterSpacing: '0.1em', fontSize: '0.875rem', marginBottom: '16px', fontWeight: 600 }}>
                     {key}
                   </div>
@@ -115,70 +115,94 @@ const ProjectDetail = () => {
           <div className="container">
             <SectionHeading>CLIENT<br/>FEEDBACK.</SectionHeading>
             
-            <div style={{ marginTop: '40px', maxWidth: '800px' }}>
-              <ScrollReveal animation="slide-up">
-                <div style={{ 
-                  backgroundColor: 'var(--color-bg-primary)',
-                  padding: '40px',
-                  borderRadius: '16px',
-                  border: '1px solid var(--color-concrete-gray)',
-                  boxShadow: '0 10px 30px -15px rgba(0,0,0,0.05)',
-                  position: 'relative'
-                }}>
-                  {/* Quote icon watermark */}
+            <div className="grid-12" style={{ marginTop: '40px', alignItems: 'center' }}>
+              <div className="col" style={{ gridColumn: 'span 6' }}>
+                <ScrollReveal animation="scale-up">
                   <div style={{ 
-                    position: 'absolute', top: '20px', right: '30px', 
-                    fontFamily: 'var(--font-primary)', fontSize: '8rem', color: 'var(--color-concrete-gray)', 
-                    opacity: 0.3, lineHeight: 0.5, pointerEvents: 'none' 
+                    backgroundColor: 'var(--color-bg-primary)',
+                    padding: '40px',
+                    borderRadius: '16px',
+                    border: '1px solid var(--color-concrete-gray)',
+                    boxShadow: '0 10px 30px -15px rgba(0,0,0,0.05)',
+                    position: 'relative'
                   }}>
-                    "
-                  </div>
-
-                  <div style={{ display: 'flex', gap: '4px', marginBottom: '20px' }}>
-                    {[1, 2, 3, 4, 5].map((star) => (
-                      <svg key={star} width="20" height="20" viewBox="0 0 24 24" fill="var(--color-accent)" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                      </svg>
-                    ))}
-                  </div>
-                  
-                  <p style={{ 
-                    fontSize: '1.25rem', 
-                    lineHeight: 1.6, 
-                    color: 'var(--color-text-primary)',
-                    marginBottom: '32px',
-                    position: 'relative',
-                    zIndex: 2
-                  }}>
-                    "{project.review.text}"
-                  </p>
-                  
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
-                    <div style={{
-                      width: '56px', height: '56px', borderRadius: '50%',
-                      backgroundColor: 'var(--color-text-primary)', color: 'var(--color-bg-primary)',
-                      display: 'flex', alignItems: 'center', justifyContent: 'center',
-                      fontFamily: 'var(--font-primary)', fontWeight: 700, fontSize: '1.25rem'
+                    {/* Quote icon watermark */}
+                    <div style={{ 
+                      position: 'absolute', top: '20px', right: '30px', 
+                      fontFamily: 'var(--font-primary)', fontSize: '8rem', color: 'var(--color-concrete-gray)', 
+                      opacity: 0.3, lineHeight: 0.5, pointerEvents: 'none' 
                     }}>
-                      {project.review.author.split(' ').map(n => n[0]).join('').substring(0, 2).toUpperCase()}
+                      "
                     </div>
-                    <div>
-                      <div style={{ 
-                        fontFamily: 'var(--font-primary)',
-                        fontSize: '1rem',
-                        fontWeight: 700,
-                        color: 'var(--color-text-primary)',
-                        marginBottom: '4px'
+
+                    <div style={{ display: 'flex', gap: '4px', marginBottom: '20px' }}>
+                      {[1, 2, 3, 4, 5].map((star) => (
+                        <svg key={star} width="20" height="20" viewBox="0 0 24 24" fill="var(--color-accent)" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                      ))}
+                    </div>
+                    
+                    <p style={{ 
+                      fontSize: '1.25rem', 
+                      lineHeight: 1.6, 
+                      color: 'var(--color-text-primary)',
+                      marginBottom: '32px',
+                      position: 'relative',
+                      zIndex: 2
+                    }}>
+                      "{project.review.text}"
+                    </p>
+                    
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
+                      <div style={{
+                        width: '56px', height: '56px', borderRadius: '50%',
+                        backgroundColor: 'var(--color-text-primary)', color: 'var(--color-bg-primary)',
+                        display: 'flex', alignItems: 'center', justifyContent: 'center',
+                        fontFamily: 'var(--font-primary)', fontWeight: 700, fontSize: '1.25rem'
                       }}>
-                        {project.review.author}
+                        {project.review.author.split(' ').map(n => n[0]).join('').substring(0, 2).toUpperCase()}
                       </div>
-                      <div style={{ color: 'var(--color-steel-gray)', fontSize: '0.875rem' }}>
-                        {project.review.role}
+                      <div>
+                        <div style={{ 
+                          fontFamily: 'var(--font-primary)',
+                          fontSize: '1rem',
+                          fontWeight: 700,
+                          color: 'var(--color-text-primary)',
+                          marginBottom: '4px'
+                        }}>
+                          {project.review.author}
+                        </div>
+                        <div style={{ color: 'var(--color-steel-gray)', fontSize: '0.875rem' }}>
+                          {project.review.role}
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-              </ScrollReveal>
+                </ScrollReveal>
+              </div>
+              <div className="col" style={{ gridColumn: 'span 6' }}>
+                <ScrollReveal animation="scale-up" delay={0.2}>
+                  <div style={{ 
+                    width: '100%', 
+                    aspectRatio: '16/9', 
+                    borderRadius: '16px', 
+                    overflow: 'hidden',
+                    boxShadow: '0 20px 40px rgba(0,0,0,0.1)'
+                  }}>
+                    <iframe 
+                      width="100%" 
+                      height="100%" 
+                      src="https://www.youtube.com/embed/OBaYB9tXYEc?si=OGpasJ417Vm4H8OK" 
+                      title="YouTube video player" 
+                      frameBorder="0" 
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                      referrerPolicy="strict-origin-when-cross-origin"
+                      allowFullScreen
+                    ></iframe>
+                  </div>
+                </ScrollReveal>
+              </div>
             </div>
           </div>
         </section>
@@ -196,7 +220,7 @@ const ProjectDetail = () => {
                 if (!relatedProj) return null;
                 
                 return (
-                  <div key={relatedId} className="col" style={{ '--col-desktop': 6 }}>
+                  <div key={relatedId} className="col" style={{ gridColumn: 'span 6' }}>
                     <ScrollReveal delay={idx * 0.1} animation="slide-up">
                       <Link to={`/projects/${relatedProj.id}`}>
                         <TiltedCard 

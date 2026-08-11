@@ -13,13 +13,15 @@ const ScrollReveal = ({
   const variants = {
     hidden: {
       opacity: 0,
-      y: animation === 'slide-up' ? 50 : 0,
+      y: animation === 'slide-up' ? 50 : animation === 'slide-down' ? -50 : 0,
       x: animation === 'slide-left' ? 50 : animation === 'slide-right' ? -50 : 0,
+      scale: animation === 'scale-up' ? 0.9 : animation === 'scale-down' ? 1.1 : 1,
     },
     visible: {
       opacity: 1,
       y: 0,
       x: 0,
+      scale: 1,
       transition: {
         duration: duration,
         delay: delay,

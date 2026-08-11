@@ -3,6 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import MobileMenu from './MobileMenu';
 import Logo from '../common/Logo';
+import SpecularButton from '../reactbits/SpecularButton';
 
 const navLinks = [
   { name: 'Home', path: '/' },
@@ -38,19 +39,32 @@ const Navbar = () => {
       <nav 
         style={{
           position: 'fixed',
-          top: 0,
-          left: 0,
-          right: 0,
+          top: isScrolled ? '24px' : 0,
+          left: '50%',
+          transform: 'translateX(-50%)',
+          width: isScrolled ? 'calc(100% - 48px)' : '100%',
+          maxWidth: isScrolled ? '1200px' : '100%',
           zIndex: 1000,
-          transition: 'all 0.4s ease',
-          backgroundColor: isScrolled ? 'rgba(247, 247, 247, 0.9)' : 'transparent',
-          backdropFilter: isScrolled ? 'blur(10px)' : 'none',
-          WebkitBackdropFilter: isScrolled ? 'blur(10px)' : 'none',
-          borderBottom: isScrolled ? '1px solid rgba(17, 19, 19, 0.1)' : '1px solid transparent',
-          padding: isScrolled ? '16px 0' : '24px 0',
+          transition: 'all 0.5s cubic-bezier(0.16, 1, 0.3, 1)',
+          backgroundColor: isScrolled ? 'rgba(255, 255, 255, 0.85)' : 'transparent',
+          backdropFilter: isScrolled ? 'blur(24px)' : 'none',
+          WebkitBackdropFilter: isScrolled ? 'blur(24px)' : 'none',
+          border: isScrolled ? '1px solid rgba(17, 19, 19, 0.05)' : '1px solid transparent',
+          borderRadius: isScrolled ? '100px' : '0',
+          boxShadow: isScrolled ? '0 20px 40px rgba(0, 0, 0, 0.06)' : 'none'
         }}
       >
-        <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+        <div 
+          className={isScrolled ? '' : 'container'} 
+          style={{ 
+            display: 'flex', 
+            justifyContent: 'space-between', 
+            alignItems: 'center',
+            padding: isScrolled ? '16px 32px' : '24px 0',
+            transition: 'padding 0.5s cubic-bezier(0.16, 1, 0.3, 1)',
+            width: '100%'
+          }}
+        >
           
           <Link to="/" style={{ 
             fontFamily: 'var(--font-primary)', 
@@ -65,7 +79,7 @@ const Navbar = () => {
             gap: '12px'
           }}>
             <Logo color={textColor} size={36} />
-            <div>GANESH<br />CONSTRUCTION</div>
+            <div>GANESH<br />PROPERTIES</div>
           </Link>
 
           <div style={{ display: 'none' }} className="nav-desktop">
@@ -94,11 +108,13 @@ const Navbar = () => {
                     {location.pathname === link.path && (
                       <div style={{
                         position: 'absolute',
-                        bottom: '-4px',
-                        left: 0,
-                        width: '100%',
-                        height: '1px',
-                        backgroundColor: textColor
+                        bottom: '-8px',
+                        left: '50%',
+                        transform: 'translateX(-50%)',
+                        width: '4px',
+                        height: '4px',
+                        borderRadius: '50%',
+                        backgroundColor: 'var(--color-accent)'
                       }} />
                     )}
                   </Link>
@@ -108,29 +124,19 @@ const Navbar = () => {
           </div>
 
           <div style={{ display: 'none', alignItems: 'center', gap: '24px' }} className="nav-desktop">
-            <Link 
+            <SpecularButton 
               to="/contact"
-              style={{
-                fontSize: '0.875rem',
-                textTransform: 'uppercase',
-                letterSpacing: '0.1em',
-                fontWeight: 600,
-                padding: '10px 24px',
-                border: `1px solid ${textColor}`,
-                color: textColor,
-                transition: 'all 0.3s ease'
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.backgroundColor = textColor;
-                e.currentTarget.style.color = (hasDarkHero && !isScrolled) ? 'var(--color-text-primary)' : 'var(--color-bg-primary)';
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.backgroundColor = 'transparent';
-                e.currentTarget.style.color = textColor;
-              }}
+              size="sm"
+              radius={100}
+              tint="#b8860b"
+              tintOpacity={1}
+              textColor="#ffffff"
+              baseColor="#b8860b"
+              lineColor="#ffffff"
+              style={{ padding: '0 24px', height: '40px', fontSize: '0.875rem', letterSpacing: '0.1em', fontWeight: 600, textTransform: 'uppercase' }}
             >
               Contact
-            </Link>
+            </SpecularButton>
           </div>
 
           <button 

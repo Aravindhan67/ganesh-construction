@@ -6,13 +6,13 @@ const reviews = [
   { 
     image: '/images/testimonials/aurelia.png', 
     label: 'Meera Sharma', 
-    text: "Ganesh Construction brought exceptional clarity to a complex project. Their ability to balance design ambition with technical discipline made every stage feel controlled and confident.",
+    text: "Ganesh Properties brought exceptional clarity to a complex project. Their ability to balance design ambition with technical discipline made every stage feel controlled and confident.",
     role: "Lead Architect, Studio Inscape"
   },
   {
     image: '/images/testimonials/nexus.png',
     label: 'James Hasting',
-    text: "The precision in their concrete finishes and the rigorous attention to structural integrity set Ganesh Construction apart from any other firm we've worked with. Outstanding execution.",
+    text: "The precision in their concrete finishes and the rigorous attention to structural integrity set Ganesh Properties apart from any other firm we've worked with. Outstanding execution.",
     role: "Director of Development, Nexus Commercial"
   },
   {
@@ -24,7 +24,7 @@ const reviews = [
   {
     image: '/images/testimonials/chen.png',
     label: 'David Chen',
-    text: "A truly collaborative partner. Ganesh Construction navigated challenging site conditions and tight timelines without ever compromising on safety, aesthetic details, or structural excellence.",
+    text: "A truly collaborative partner. Ganesh Properties navigated challenging site conditions and tight timelines without ever compromising on safety, aesthetic details, or structural excellence.",
     role: "Principal, Chen & Associates"
   },
   {
@@ -61,7 +61,7 @@ const Testimonial = () => {
           />
         </ScrollReveal>
 
-        <ScrollReveal animation="fade" delay={0.1}>
+        <ScrollReveal animation="scale-up" delay={0.1}>
           <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center' }}>
             <div style={{ 
               fontFamily: 'var(--font-primary)',
@@ -100,6 +100,27 @@ const Testimonial = () => {
               <div style={{ color: 'var(--color-steel-gray)', fontSize: '1rem' }}>
                 {reviews[activeIndex].role}
               </div>
+            </div>
+
+            <div style={{ 
+              width: '100%', 
+              maxWidth: '800px', 
+              margin: '60px auto 0', 
+              aspectRatio: '16/9', 
+              borderRadius: '16px', 
+              overflow: 'hidden', 
+              boxShadow: '0 20px 40px rgba(0,0,0,0.1)' 
+            }}>
+              <iframe 
+                width="100%" 
+                height="100%" 
+                src="https://www.youtube.com/embed/OBaYB9tXYEc?si=OGpasJ417Vm4H8OK" 
+                title="YouTube video player" 
+                frameBorder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+              ></iframe>
             </div>
           </div>
         </ScrollReveal>

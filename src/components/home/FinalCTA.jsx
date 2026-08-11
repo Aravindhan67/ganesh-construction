@@ -1,5 +1,5 @@
 import React from 'react';
-import Button from '../common/Button';
+import SpecularButton from '../reactbits/SpecularButton';
 import ScrollReveal from '../reactbits/ScrollReveal';
 import ShinyText from '../reactbits/ShinyText';
 
@@ -24,7 +24,16 @@ const FinalCTA = () => {
             Tell us what you are planning. We'll help define the path from possibility to reality.
           </p>
           
-          <Button to="/contact" withArrow>START A CONVERSATION</Button>
+          <SpecularButton 
+            to="/contact" 
+            withArrow
+            tint="var(--color-text-primary)"
+            tintOpacity={1}
+            textColor="#ffffff"
+            baseColor="#111313"
+          >
+            START A CONVERSATION
+          </SpecularButton>
         </ScrollReveal>
       </div>
     </div>

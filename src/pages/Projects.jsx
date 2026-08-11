@@ -62,7 +62,7 @@ const Projects = () => {
                 transition={{ duration: 0.5 }}
                 className="col"
                 style={{ 
-                  '--col-desktop': 6,
+                  gridColumn: 'span 6',
                   marginBottom: '40px'
                 }}
               >

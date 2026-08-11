@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import SectionHeading from '../components/common/SectionHeading';
-import Button from '../components/common/Button';
+import SpecularButton from '../components/reactbits/SpecularButton';
 import ScrollReveal from '../components/reactbits/ScrollReveal';
 import SplitText from '../components/reactbits/SplitText';
 import { MapPin, Phone, Mail, Clock } from 'lucide-react';
@@ -66,7 +66,7 @@ const Contact = () => {
         <div className="container grid-12">
           
           {/* Left Col - Info Cards */}
-          <div className="col" style={{ '--col-desktop': 5 }}>
+          <div className="col" style={{ gridColumn: 'span 5' }}>
             <ScrollReveal delay={0.2} animation="slide-up">
               <p className="text-body-lg" style={{ marginBottom: '48px', color: 'var(--color-text-primary)' }}>
                 Whether you're planning a private residence, commercial development or complex construction project, start the conversation with our team.
@@ -81,7 +81,7 @@ const Contact = () => {
                   <div>
                     <h4 className="info-title">Head Office</h4>
                     <div className="info-text">
-                      Ganesh Construction<br />
+                      Ganesh Properties<br />
                       120 Innovation Avenue<br />
                       Chennai, Tamil Nadu, India
                     </div>
@@ -97,7 +97,7 @@ const Contact = () => {
                     <h4 className="info-title">Contact</h4>
                     <div className="info-text">
                       +91 44 4000 2026<br/>
-                      hello@ganeshconstruction.com
+                      hello@ganeshproperties.com
                     </div>
                   </div>
                 </div>
@@ -120,7 +120,7 @@ const Contact = () => {
           </div>
 
           {/* Right Col - Form */}
-          <div className="col" style={{ '--col-desktop': 6, gridColumnStart: 7 }}>
+          <div className="col" style={{ gridColumn: '7 / span 6' }}>
             <ScrollReveal delay={0.4} animation="slide-up">
               <div className="form-container">
                 {status === 'success' ? (
@@ -153,56 +153,31 @@ const Contact = () => {
                       </div>
                     </div>
                     
-                    <div className="form-row">
-                      <div className="form-group">
-                        <input type="tel" required id="phone" placeholder=" " />
-                        <label htmlFor="phone">Phone Number *</label>
-                        <div className="focus-border"></div>
-                      </div>
-                      <div className="form-group">
-                        <input type="text" id="company" placeholder=" " />
-                        <label htmlFor="company">Company</label>
-                        <div className="focus-border"></div>
-                      </div>
-                    </div>
-
-                    <div className="form-row">
-                      <div className="form-group">
-                        <select required id="projectType" defaultValue="">
-                          <option value="" disabled hidden></option>
-                          <option value="residential">Residential</option>
-                          <option value="commercial">Commercial</option>
-                          <option value="hospitality">Hospitality</option>
-                          <option value="interior">Interior</option>
-                          <option value="infrastructure">Infrastructure</option>
-                          <option value="other">Other</option>
-                        </select>
-                        <label htmlFor="projectType">Project Type *</label>
-                        <div className="focus-border"></div>
-                      </div>
-                      <div className="form-group">
-                        <input type="text" id="budget" placeholder=" " />
-                        <label htmlFor="budget">Estimated Budget</label>
-                        <div className="focus-border"></div>
-                      </div>
-                    </div>
-
                     <div className="form-group">
-                      <input type="text" required id="location" placeholder=" " />
-                      <label htmlFor="location">Project Location *</label>
+                      <input type="tel" required id="phone" placeholder=" " />
+                      <label htmlFor="phone">Phone Number *</label>
                       <div className="focus-border"></div>
                     </div>
 
                     <div className="form-group">
                       <textarea rows="4" required id="details" placeholder=" "></textarea>
-                      <label htmlFor="details">Tell Us About Your Project *</label>
+                      <label htmlFor="details">How can we help you? *</label>
                       <div className="focus-border"></div>
                     </div>
 
                     <div style={{ marginTop: '24px' }}>
-                      <Button type="submit" disabled={status === 'submitting'} withArrow style={{ width: '100%', justifyContent: 'center' }}>
+                      <SpecularButton 
+                        type="submit" 
+                        disabled={status === 'submitting'} 
+                        withArrow 
+                        style={{ width: '100%', justifyContent: 'center' }}
+                        tint="var(--color-text-primary)"
+                        tintOpacity={1}
+                        textColor="#ffffff"
+                        baseColor="#111313"
+                      >
                         {status === 'submitting' ? 'Sending...' : 'Send Enquiry'}
-                      </Button>
+                      </SpecularButton>
                     </div>
                   </form>
                 )}
@@ -218,20 +193,27 @@ const Contact = () => {
         .info-card {
           display: flex;
           gap: 24px;
-          padding: 32px;
-          background: var(--color-bg-secondary);
-          border: 1px solid rgba(17, 19, 19, 0.05);
-          border-radius: 4px;
-          transition: transform 0.3s ease, box-shadow 0.3s ease;
+          padding: 24px 0;
+          border-bottom: 1px solid var(--color-concrete-gray);
+          transition: transform 0.3s ease;
+        }
+        .info-card:last-child {
+          border-bottom: none;
         }
         .info-card:hover {
-          transform: translateY(-4px);
-          box-shadow: 0 12px 40px rgba(0, 0, 0, 0.04);
+          transform: translateX(8px);
         }
         .info-icon {
           color: var(--color-accent);
           flex-shrink: 0;
           margin-top: 4px;
+          background: rgba(184, 134, 11, 0.1);
+          width: 48px;
+          height: 48px;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
         }
         .info-title {
           font-size: 0.75rem;
@@ -250,10 +232,10 @@ const Contact = () => {
         /* Form Container */
         .form-container {
           background: var(--color-bg-secondary);
-          padding: 48px;
-          border-radius: 4px;
-          box-shadow: 0 20px 60px rgba(0, 0, 0, 0.03);
-          border: 1px solid rgba(17, 19, 19, 0.05);
+          padding: 56px;
+          border-radius: 12px;
+          box-shadow: 0 24px 80px rgba(0, 0, 0, 0.07);
+          border: none;
         }
 
         /* Floating Label Form */

@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import SectionHeading from '../common/SectionHeading';
-import Button from '../common/Button';
+import SpecularButton from '../reactbits/SpecularButton';
 import ScrollReveal from '../reactbits/ScrollReveal';
 
 const stages = [
@@ -55,7 +55,17 @@ const ScrollStages = () => {
               )}
               {stage.isFinal && (
                 <div style={{ pointerEvents: 'auto', marginTop: '32px' }}>
-                  <Button to="/projects" withArrow>VIEW PROJECTS</Button>
+                  <SpecularButton 
+                    to="/projects" 
+                    withArrow
+                    tint="#ffffff"
+                    tintOpacity={1}
+                    textColor="var(--color-text-primary)"
+                    baseColor="#ffffff"
+                    lineColor="var(--color-text-primary)"
+                  >
+                    VIEW PROJECTS
+                  </SpecularButton>
                 </div>
               )}
             </ScrollReveal>

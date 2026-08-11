@@ -36,7 +36,7 @@ const SceneLoader = () => {
               letterSpacing: '0.1em',
               marginBottom: '24px'
             }}>
-              GANESH CONSTRUCTION
+              GANESH PROPERTIES
             </div>
             
             <div style={{

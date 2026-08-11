@@ -25,7 +25,7 @@ export const projects = [
     },
     featured: true,
     review: {
-      text: 'Ganesh Construction brought an incredible level of precision to The Aurelia Residences. The attention to detail in the concrete finishes and complex joinery exceeded our highest expectations.',
+      text: 'Ganesh Properties brought an incredible level of precision to The Aurelia Residences. The attention to detail in the concrete finishes and complex joinery exceeded our highest expectations.',
       author: 'MEERA SHARMA',
       role: 'Lead Architect, Studio Inscape'
     },
@@ -191,7 +191,7 @@ export const projects = [
     technicalDetails: {},
     featured: false,
     review: {
-      text: 'The precision required for our brass detailing and custom millwork was extreme. Ganesh Construction delivered a flawless space that perfectly reflects our brand\'s commitment to craftsmanship.',
+      text: 'The precision required for our brass detailing and custom millwork was extreme. Ganesh Properties delivered a flawless space that perfectly reflects our brand\'s commitment to craftsmanship.',
       author: 'ROHIT BAL',
       role: 'Creative Director, Atelier 19'
     },

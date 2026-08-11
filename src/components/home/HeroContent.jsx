@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Button from '../common/Button';
+import SpecularButton from '../reactbits/SpecularButton';
 import ScrollExpand from '../reactbits/ScrollExpand';
 
 const HeroContent = () => {
@@ -20,8 +20,8 @@ const HeroContent = () => {
         "/images/projects/aurelia.png",
         "/images/projects/meridian.png"
       ]}
-      alt="Ganesh Construction"
-      title="GANESH CONSTRUCTION"
+      alt="Ganesh Properties"
+      title="GANESH PROPERTIES"
       scrollHint="Scroll to explore"
       useWindowScroll={true}
       startWidth={isMobile ? 92 : 65}
@@ -44,12 +44,31 @@ const HeroContent = () => {
           className="text-body-lg" 
           style={{ maxWidth: '600px', marginBottom: '48px', marginInline: 'auto', color: 'rgba(255,255,255,0.9)' }}
         >
-          Ganesh Construction delivers exceptional residential, commercial and infrastructure projects through uncompromising engineering, refined design and disciplined execution.
+          Delivering exceptional projects through uncompromising engineering and refined design.
         </p>
         
         <div style={{ display: 'flex', gap: '24px' }}>
-          <Button to="/projects" style={{ backgroundColor: 'white', color: 'var(--color-text-primary)' }} withArrow>Explore Projects</Button>
-          <Button to="/about" variant="secondary" style={{ color: 'white', borderColor: 'rgba(255,255,255,0.4)' }}>Our Approach</Button>
+          <SpecularButton 
+            to="/projects" 
+            withArrow
+            tint="#ffffff"
+            tintOpacity={1}
+            textColor="var(--color-text-primary)"
+            baseColor="#ffffff"
+            lineColor="var(--color-text-primary)"
+          >
+            Explore Projects
+          </SpecularButton>
+          <SpecularButton 
+            to="/about" 
+            tint="#ffffff"
+            tintOpacity={0}
+            textColor="#ffffff"
+            baseColor="#525252"
+            style={{ border: '1px solid rgba(255,255,255,0.4)' }}
+          >
+            Our Approach
+          </SpecularButton>
         </div>
       </div>
     </ScrollExpand>
