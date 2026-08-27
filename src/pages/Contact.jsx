@@ -37,7 +37,7 @@ const Contact = () => {
         <div style={{
           position: 'absolute',
           inset: 0,
-          backgroundImage: 'url(/images/projects/meridian.png)',
+          backgroundImage: 'url(https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=1600&q=80)',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundAttachment: 'fixed', // Parallax effect
@@ -69,7 +69,7 @@ const Contact = () => {
           <div className="col" style={{ gridColumn: 'span 5' }}>
             <ScrollReveal delay={0.2} animation="slide-up">
               <p className="text-body-lg" style={{ marginBottom: '48px', color: 'var(--color-text-primary)' }}>
-                Whether you're planning a private residence, commercial development or complex construction project, start the conversation with our team.
+                Whether you're planning a private residence interior, commercial fit-out or complex bespoke project, start the conversation with our team.
               </p>
               
               <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
@@ -81,9 +81,9 @@ const Contact = () => {
                   <div>
                     <h4 className="info-title">Head Office</h4>
                     <div className="info-text">
-                      Ganesh Properties<br />
+                      Dazzy Interiors<br />
                       120 Innovation Avenue<br />
-                      Chennai, Tamil Nadu, India
+                      Erode, Tamil Nadu, India
                     </div>
                   </div>
                 </div>
@@ -97,7 +97,7 @@ const Contact = () => {
                     <h4 className="info-title">Contact</h4>
                     <div className="info-text">
                       +91 44 4000 2026<br/>
-                      hello@ganeshproperties.com
+                      hello@dazzyinteriors.com
                     </div>
                   </div>
                 </div>

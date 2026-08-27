@@ -14,7 +14,7 @@ const About = () => {
       <section style={{ minHeight: '60vh', display: 'flex', alignItems: 'center' }}>
         <div className="container">
           <SectionLabel>
-            <ShinyText text="About Ganesh Properties" disabled={false} speed={3} className="" />
+            <ShinyText text="About Dazzy Interiors" disabled={false} speed={3} className="" />
           </SectionLabel>
           <SectionHeading>
             <SplitText text="PRECISION IS OUR FOUNDATION." delay={50} animationFrom={{ opacity: 0, transform: 'translate3d(0,50px,0)' }} animationTo={{ opacity: 1, transform: 'translate3d(0,0,0)' }} easing="easeOutCubic" threshold={0.2} rootMargin="-50px" />
@@ -45,7 +45,7 @@ const About = () => {
           <div className="col" style={{ gridColumn: 'span 7', display: 'flex' }}>
             <ScrollReveal animation="slide-up" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'flex-end', flexGrow: 1 }}>
               <div style={{ display: 'flex', flexDirection: 'column', gap: '24px', fontSize: '1.125rem', color: 'var(--color-text-secondary)', lineHeight: 1.6 }}>
-                <p>Ganesh Properties was founded with a simple idea: construction should feel as considered as the architecture itself.</p>
+                <p>Dazzy Interiors was founded with a simple idea: interior execution should feel as considered as the architecture itself.</p>
                 <p>Over the years, that idea has shaped how we plan, communicate and build. We bring architects, engineers, consultants and skilled teams together around a single shared objective—delivering projects without losing sight of the details that define them.</p>
                 <p>Our work spans private residences, commercial environments, mixed-use developments and complex infrastructure. While every project is different, our approach remains consistent: understand deeply, plan precisely and execute without compromise.</p>
               </div>

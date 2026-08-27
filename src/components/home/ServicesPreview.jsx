@@ -4,10 +4,10 @@ import ScrollReveal from '../reactbits/ScrollReveal';
 
 const ServicesPreview = () => {
   const services = [
-    { num: '01', title: 'DESIGN & BUILD', desc: 'An integrated approach that connects concept, engineering and execution from the first sketch to final handover.' },
-    { num: '02', title: 'GENERAL CONTRACTING', desc: 'Disciplined project delivery supported by experienced teams, trusted partners and transparent management.' },
-    { num: '03', title: 'PROJECT MANAGEMENT', desc: 'Clear planning, precise coordination and rigorous control across every phase of the construction lifecycle.' },
-    { num: '04', title: 'PREMIUM INTERIORS', desc: 'Thoughtfully executed interior environments where material, detail and craftsmanship meet.' }
+    { num: '01', title: 'DESIGN & EXECUTION', desc: 'An integrated approach that connects spatial concept, technical detailing and execution from the first sketch to final handover.' },
+    { num: '02', title: 'INTERIOR CONTRACTING', desc: 'Disciplined project delivery supported by experienced artisans, trusted partners and transparent management.' },
+    { num: '03', title: 'PROJECT MANAGEMENT', desc: 'Clear planning, precise coordination and rigorous control across every phase of the interior lifecycle.' },
+    { num: '04', title: 'BESPOKE JOINERY & STYLING', desc: 'Thoughtfully executed interior environments where material, detail and craftsmanship meet.' }
   ];
 
   return (

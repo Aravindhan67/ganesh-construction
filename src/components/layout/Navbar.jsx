@@ -79,7 +79,7 @@ const Navbar = () => {
             gap: '12px'
           }}>
             <Logo color={textColor} size={36} />
-            <div>GANESH<br />PROPERTIES</div>
+            <div>DAZZY<br />INTERIORS</div>
           </Link>
 
           <div style={{ display: 'none' }} className="nav-desktop">

@@ -5,7 +5,7 @@ import ScrollReveal from '../reactbits/ScrollReveal';
 const Process = () => {
   const steps = [
     { num: '01 — DISCOVER', desc: 'We understand the site, ambition, constraints and opportunities before defining the path forward.' },
-    { num: '02 — DEFINE', desc: 'We align design, engineering, budget and timeline into one clear execution strategy.' },
+    { num: '02 — DEFINE', desc: 'We align spatial design, material sourcing, budget and timeline into one clear execution strategy.' },
     { num: '03 — BUILD', desc: 'Specialist teams and disciplined systems transform plans into measurable progress.' },
     { num: '04 — DELIVER', desc: 'Every detail is reviewed, tested and refined before the project becomes yours.' }
   ];
@@ -14,7 +14,7 @@ const Process = () => {
     <div style={{ padding: '60px 0', backgroundColor: 'var(--color-bg-secondary)', position: 'relative', zIndex: 10 }}>
       <div className="container">
         <ScrollReveal>
-          <SectionHeading>HOW GREAT<br/>STRUCTURES HAPPEN.</SectionHeading>
+          <SectionHeading>HOW GREAT<br/>SPACES HAPPEN.</SectionHeading>
         </ScrollReveal>
 
         <div style={{ display: 'flex', flexDirection: 'column', gap: '40px', marginTop: '32px' }}>

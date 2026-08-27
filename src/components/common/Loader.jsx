@@ -25,7 +25,7 @@ const Loader = ({ progress = 0 }) => {
         gap: '16px'
       }}>
         <Logo size={48} />
-        <div>GANESH PROPERTIES</div>
+        <div>DAZZY INTERIORS</div>
       </div>
       <div style={{
         width: '200px',

@@ -1,46 +1,46 @@
 export const services = [
   {
-    id: 'pre-construction',
+    id: 'interior-planning',
     num: '01',
-    title: 'PRE-CONSTRUCTION',
-    description: 'Before construction begins, we establish clarity. Feasibility studies, budgets, schedules, procurement strategies and risk planning are aligned to create a stronger path to delivery.',
+    title: 'INTERIOR PLANNING & STRATEGY',
+    description: 'Before interior work begins, we establish clarity. Spatial planning, budgets, schedules, procurement strategies and design intent are aligned to create a stronger path to delivery.',
     capabilities: [
-      'Feasibility Analysis',
+      'Space Planning',
       'Budget Development',
-      'Value Engineering',
-      'Construction Scheduling',
-      'Procurement Planning',
-      'Risk Assessment'
+      'Material Sourcing',
+      'Interior Scheduling',
+      'Procurement Strategy',
+      'Design Coordination'
     ],
-    image: '/images/projects/nexus.png'
+    image: 'https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1200&q=80'
   },
   {
-    id: 'design-build',
+    id: 'design-execution',
     num: '02',
-    title: 'DESIGN & BUILD',
-    description: 'A single integrated team creates stronger coordination between design ambition and construction reality.',
+    title: 'DESIGN & EXECUTION',
+    description: 'A single integrated team creates stronger coordination between design ambition and interior reality.',
     capabilities: [
-      'Architectural Coordination',
-      'Engineering Integration',
-      'Buildability Reviews',
+      'Design Development',
+      'Technical Detailing',
+      'Lighting Integration',
       'Material Selection',
       'Cost Control'
     ],
-    image: '/images/projects/aurelia.png'
+    image: 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&q=80'
   },
   {
-    id: 'general-contracting',
+    id: 'interior-contracting',
     num: '03',
-    title: 'GENERAL CONTRACTING',
-    description: 'We coordinate people, materials, equipment and specialist expertise to keep complex construction moving forward.',
+    title: 'INTERIOR CONTRACTING',
+    description: 'We coordinate artisans, materials, custom fixtures and specialist expertise to keep complex interior work moving forward.',
     capabilities: [
       'Site Management',
       'Trade Coordination',
       'Quality Control',
-      'Safety Management',
+      'Health & Safety',
       'Progress Reporting'
     ],
-    image: '/images/projects/meridian.png'
+    image: 'https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=1200&q=80'
   },
   {
     id: 'project-management',
@@ -54,20 +54,20 @@ export const services = [
       'Stakeholder Reporting',
       'Change Management'
     ],
-    image: '/images/projects/solace.png'
+    image: 'https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1200&q=80'
   },
   {
-    id: 'interiors',
+    id: 'bespoke-joinery',
     num: '05',
-    title: 'INTERIORS & FIT-OUT',
+    title: 'BESPOKE JOINERY & STYLING',
     description: 'Premium spaces demand exceptional control over detail. We manage the craftsmanship, sequencing and finishing required to deliver them.',
     capabilities: [
-      'Luxury Interiors',
-      'Corporate Fit-Out',
-      'Hospitality Interiors',
-      'Custom Joinery',
-      'Final Styling'
+      'Custom Millwork',
+      'Bespoke Furniture',
+      'Art & Styling',
+      'Soft Furnishings',
+      'Final Handover'
     ],
-    image: '/images/projects/aurelia.png'
+    image: 'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1200&q=80'
   }
 ];

@@ -36,7 +36,7 @@ const MobileMenu = ({ isOpen, onClose, links }) => {
               gap: '12px'
             }}>
               <Logo size={32} />
-              <div>GANESH<br />PROPERTIES</div>
+              <div>DAZZY<br />INTERIORS</div>
             </div>
             <button onClick={onClose}>
               <X size={32} />
@@ -99,7 +99,7 @@ const MobileMenu = ({ isOpen, onClose, links }) => {
             style={{ paddingBottom: '32px' }}
           >
             <div style={{ fontSize: '0.875rem', color: 'var(--color-text-secondary)', marginBottom: '8px' }}>
-              hello@ganeshproperties.com
+              hello@dazzyinteriors.com
             </div>
             <div style={{ fontSize: '0.875rem', color: 'var(--color-text-secondary)' }}>
               +91 44 4000 2026

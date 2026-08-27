@@ -4,33 +4,33 @@ import AccordionGallery from '../reactbits/AccordionGallery';
 
 const reviews = [
   { 
-    image: '/images/testimonials/aurelia.png', 
-    label: 'Meera Sharma', 
-    text: "Ganesh Properties brought exceptional clarity to a complex project. Their ability to balance design ambition with technical discipline made every stage feel controlled and confident.",
-    role: "Lead Architect, Studio Inscape"
-  },
-  {
-    image: '/images/testimonials/nexus.png',
-    label: 'James Hasting',
-    text: "The precision in their concrete finishes and the rigorous attention to structural integrity set Ganesh Properties apart from any other firm we've worked with. Outstanding execution.",
-    role: "Director of Development, Nexus Commercial"
-  },
-  {
-    image: '/images/testimonials/horizon.png',
-    label: 'Elena Rostova',
-    text: "From the initial feasibility study to the final handover, their team demonstrated an uncompromising commitment to quality. Our headquarters stands as a testament to their legacy.",
+    image: 'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=800&q=80', 
+    label: 'Elena Rostova', 
+    text: "The interior execution was flawless. Dazzy Interiors brought our vision to life with exceptional attention to material quality and spatial flow.",
     role: "CEO, Horizon Corporate"
   },
   {
-    image: '/images/testimonials/chen.png',
+    image: 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=800&q=80',
+    label: 'James Hasting',
+    text: "Their disciplined approach to high-end residential interiors gave us total peace of mind. Every finish, from the bespoke millwork to the lighting, was perfect.",
+    role: "Director, Nexus Residential"
+  },
+  {
+    image: 'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=800&q=80',
+    label: 'Meera Sharma',
+    text: "Balancing design ambition with practical execution is rarely easy, but their interior contracting team made it look effortless. Truly outstanding work.",
+    role: "Lead Designer, Studio Inscape"
+  },
+  {
+    image: 'https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=800&q=80',
     label: 'David Chen',
-    text: "A truly collaborative partner. Ganesh Properties navigated challenging site conditions and tight timelines without ever compromising on safety, aesthetic details, or structural excellence.",
+    text: "A truly collaborative partner in commercial interiors. They navigated tight timelines without ever compromising on aesthetic details or execution quality.",
     role: "Principal, Chen & Associates"
   },
   {
-    image: '/images/testimonials/zenith.png',
+    image: 'https://images.unsplash.com/photo-1598928506311-c55dedbfc181?auto=format&fit=crop&w=800&q=80',
     label: 'Sarah Jenkins',
-    text: "Their disciplined approach to construction management gave our investors total peace of mind. The project was delivered flawlessly, exceeding our highest expectations.",
+    text: "From the initial material selection to the final handover, their team demonstrated an uncompromising commitment to crafting beautiful, functional spaces.",
     role: "Managing Partner, Zenith Investments"
   }
 ];
@@ -111,16 +111,16 @@ const Testimonial = () => {
               overflow: 'hidden', 
               boxShadow: '0 20px 40px rgba(0,0,0,0.1)' 
             }}>
-              <iframe 
-                width="100%" 
-                height="100%" 
-                src="https://www.youtube.com/embed/OBaYB9tXYEc?si=OGpasJ417Vm4H8OK" 
-                title="YouTube video player" 
-                frameBorder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                referrerPolicy="strict-origin-when-cross-origin"
-                allowFullScreen
-              ></iframe>
+              <img 
+                key={activeIndex} // Force re-render for smooth transition if needed, though simple src change is fine
+                src={reviews[activeIndex].image} 
+                alt={`Interior project for ${reviews[activeIndex].label}`}
+                style={{
+                  width: '100%',
+                  height: '100%',
+                  objectFit: 'cover'
+                }}
+              />
             </div>
           </div>
         </ScrollReveal>

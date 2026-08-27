@@ -16,7 +16,7 @@ const Footer = () => {
             <Link to="/" style={{ display: 'inline-flex', alignItems: 'center', gap: '16px', marginBottom: '24px' }}>
               <Logo size={48} color="var(--color-accent)" />
               <div style={{ fontFamily: 'var(--font-primary)', fontWeight: 800, fontSize: '1.25rem', letterSpacing: '0.05em', lineHeight: 1.1 }}>
-                GANESH<br/>PROPERTIES
+                DAZZY<br/>INTERIORS
               </div>
             </Link>
             <p style={{ color: 'rgba(255, 255, 255, 0.6)', lineHeight: 1.6, fontSize: '0.9375rem', marginBottom: '32px' }}>
@@ -59,7 +59,7 @@ const Footer = () => {
             <ul style={{ display: 'flex', flexDirection: 'column', gap: '20px', color: 'rgba(255, 255, 255, 0.8)', fontSize: '0.9375rem' }}>
               <li style={{ display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
                 <MapPin size={20} color="var(--color-accent)" style={{ flexShrink: 0, marginTop: '2px' }} />
-                <span>124 Architecture Avenue,<br/>Chennai, TN 600001, India</span>
+                <span>124 Interior Avenue,<br/>Erode, TN 638001, India</span>
               </li>
               <li style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
                 <Phone size={20} color="var(--color-accent)" style={{ flexShrink: 0 }} />
@@ -67,7 +67,7 @@ const Footer = () => {
               </li>
               <li style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
                 <Mail size={20} color="var(--color-accent)" style={{ flexShrink: 0 }} />
-                <span>hello@ganeshproperties.com</span>
+                <span>hello@dazzyinteriors.com</span>
               </li>
             </ul>
           </div>
@@ -101,7 +101,7 @@ const Footer = () => {
           gap: '24px'
         }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-            &copy; {new Date().getFullYear()} Ganesh Properties. All rights reserved.
+            &copy; {new Date().getFullYear()} Dazzy Interiors. All rights reserved.
           </div>
           
           <div style={{ display: 'flex', gap: '32px' }}>

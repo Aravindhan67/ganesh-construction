@@ -17,7 +17,7 @@ const FinalCTA = () => {
         <ScrollReveal animation="slide-up">
           <h2 className="text-h1" style={{ marginBottom: '32px' }}>
             HAVE A VISION<br />
-            <ShinyText text="WORTH BUILDING?" speed={3} />
+            <ShinyText text="WORTH REALIZING?" speed={3} />
           </h2>
           
           <p className="text-body-lg" style={{ maxWidth: '600px', margin: '0 auto 48px auto' }}>

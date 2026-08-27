@@ -36,7 +36,7 @@ const SceneLoader = () => {
               letterSpacing: '0.1em',
               marginBottom: '24px'
             }}>
-              GANESH PROPERTIES
+              DAZZY INTERIORS
             </div>
             
             <div style={{

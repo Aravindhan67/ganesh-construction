@@ -15,14 +15,14 @@ const Services = () => {
             <div className="col" style={{ gridColumn: 'span 5' }}>
               <ScrollReveal delay={0.4} animation="slide-up">
                 <div style={{ width: '100%', height: '400px', borderRadius: '4px', overflow: 'hidden' }}>
-                  <img src="/images/hero_bg.png" alt="Construction expertise" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                  <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1200&q=80" alt="Interior expertise" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                 </div>
               </ScrollReveal>
             </div>
             <div className="col" style={{ gridColumn: '7 / span 6' }}>
               <ScrollReveal delay={0.6} animation="slide-up">
                 <p className="text-body-lg">
-                  We leverage decades of experience to deliver projects that stand the test of time. From complex structural foundations to high-end architectural finishes, our team combines precision engineering with artisanal craft.
+                  We leverage decades of experience to deliver interior projects that stand the test of time. From complex spatial planning to high-end architectural finishes, our team combines precise execution with artisanal craft.
                 </p>
               </ScrollReveal>
             </div>
